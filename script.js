@@ -1,6 +1,6 @@
 // The text to be typed
 const textToType =
-  "This is the text that you need to type in order to pass.↵This is the second line.";
+  "This is the text that you need to type in order to pass.↵This is the second line. This will be another line of text.";
 
 // Get the container div
 const typingText = document.getElementById("typingText");
