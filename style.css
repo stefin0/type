@@ -15,30 +15,28 @@ body {
   margin: auto;
   width: 1000px;
   height: 600px;
-  border: 1px solid red;
 }
 
 #screen {
-  border: 1px solid green;
+  border: 5px solid black;
+  border-radius: 1rem;
   height: 60%;
-  background-color: orange;
+  overflow-y: auto;
 }
 
 /* Typing text area */
 #typingText {
   margin: auto;
   font-size: 2rem;
-  border: 5px solid black;
   padding: 1rem;
   border-radius: 0.5rem;
   max-width: 50ch;
-  background-color: purple;
 }
 
 /* Keyboard part */
 #keyboard {
   padding: 1rem;
-  border: 1px solid blue;
+  border-radius: 1rem;
   height: 50%;
   background-color: #999;
   transform: perspective(1000px) rotateX(45deg);
@@ -63,14 +61,16 @@ body {
   width: 45%;
 }
 
-#key-l-shift,
-#key-r-shift {
-  width: 10%;
+#key-fn {
+  width: 20%;
 }
 
-#key-enter,
-#key-l-alt,
-#key-r-alt {
+#key-l-shift,
+#key-r-shift {
+  width: 8%;
+}
+
+#key-enter {
   width: 7%;
 }
 
@@ -79,32 +79,38 @@ body {
 }
 
 #key-esc {
-  width: 2%;
+  width: 4%;
 }
 
 /* COLORS OF KEYS */
 .col-pinky {
-  background-color: rgba(0, 255, 0, 0.5);
+  background-color: rgb(0, 255, 0);
+  opacity: 0.25;
 }
 
 .col-ring {
-  background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgb(30, 144, 255);
+  opacity: 0.25;
 }
 
 .col-middle {
-  background-color: rgba(128, 0, 128, 0.5);
+  background-color: rgb(128, 0, 128);
+  opacity: 0.25;
 }
 
 .col-l-index {
-  background-color: rgba(255, 255, 0, 0.5);
+  background-color: rgb(255, 255, 0);
+  opacity: 0.25;
 }
 
 .col-r-index {
-  background-color: rgba(255, 165, 0, 0.5);
+  background-color: rgb(255, 165, 0);
+  opacity: 0.25;
 }
 
 .col-thumb {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
+  opacity: 0.25;
 }
 
 /* HANDS */
@@ -143,6 +149,7 @@ body {
   border-top: 5px solid black;
   border-left: 5px solid black;
   border-right: 5px solid black;
+  opacity: 0.25;
 }
 
 /* LEFT FINGERS */
@@ -150,35 +157,35 @@ body {
   left: 0;
   top: -50%;
   height: 50%;
-  background-color: rgba(0, 255, 0, 0.5);
+  background-color: rgb(0, 255, 0);
 }
 
 #left-ring {
   left: 20%;
   top: -80%;
   height: 80%;
-  background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgb(30, 144, 255);
 }
 
 #left-middle {
   left: 40%;
   top: -100%;
   height: 100%;
-  background-color: rgba(128, 0, 128, 0.5);
+  background-color: rgb(128, 0, 128);
 }
 
 #left-index {
   left: 60%;
   top: -90%;
   height: 90%;
-  background-color: rgba(255, 255, 0, 0.5);
+  background-color: rgb(255, 255, 0);
 }
 
 #left-thumb {
   left: 80%;
   top: -35%;
   height: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
 }
 
 /* RIGHT FINGERS */
@@ -186,33 +193,37 @@ body {
   right: 0;
   top: -50%;
   height: 50%;
-  background-color: rgba(0, 255, 0, 0.5);
+  background-color: rgb(0, 255, 0);
 }
 
 #right-ring {
   right: 20%;
   top: -80%;
   height: 80%;
-  background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgb(30, 144, 255);
 }
 
 #right-middle {
   right: 40%;
   top: -100%;
   height: 100%;
-  background-color: rgba(128, 0, 128, 0.5);
+  background-color: rgb(128, 0, 128);
 }
 
 #right-index {
   right: 60%;
   top: -90%;
   height: 90%;
-  background-color: rgba(255, 165, 0, 0.5);
+  background-color: rgb(255, 165, 0);
 }
 
 #right-thumb {
   right: 80%;
   top: -35%;
   height: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
+}
+
+.highlighted {
+  opacity: 1;
 }
