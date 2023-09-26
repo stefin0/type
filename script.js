@@ -16,6 +16,249 @@ const letters = textToType
 // Insert the spans into the container div
 typingText.innerHTML = letters;
 
+// Define a mapping of characters to their corresponding key IDs and finger IDs
+const charMap = {
+  // First row of keys on the keyboard
+  1: {
+    keyId: "key-1",
+    fingerId: "left-pinky",
+    color: "green",
+  },
+  2: {
+    keyId: "key-2",
+    fingerId: "left-ring",
+    color: "rgb(30,144,255)",
+  },
+  3: {
+    keyId: "key-3",
+    fingerId: "left-middle",
+    color: "purple",
+  },
+  4: {
+    keyId: "key-4",
+    fingerId: "left-index",
+    color: "yellow",
+  },
+  5: {
+    keyId: "key-5",
+    fingerId: "left-index",
+    color: "yellow",
+  },
+  6: {
+    keyId: "key-6",
+    fingerId: "right-index",
+    color: "orange",
+  },
+  7: {
+    keyId: "key-7",
+    fingerId: "right-index",
+    color: "orange",
+  },
+  8: {
+    keyId: "key-8",
+    fingerId: "right-middle",
+    color: "purple",
+  },
+  9: {
+    keyId: "key-9",
+    fingerId: "right-ring",
+    color: "rgb(30,144,255)",
+  },
+  0: {
+    keyId: "key-0",
+    fingerId: "right-pinky",
+    color: "green",
+  },
+  "-": {
+    keyId: "key-minus",
+    fingerId: "right-pinky",
+    color: "green",
+  },
+  "=": {
+    keyId: "key-equal",
+    fingerId: "right-pinky",
+    color: "green",
+  },
+
+  // Second row of keys on the keyboard
+  q: {
+    keyId: "key-q",
+    fingerId: "left-pinky",
+    color: "green",
+  },
+  w: {
+    keyId: "key-w",
+    fingerId: "left-ring",
+    color: "rgb(30,144,255)",
+  },
+  e: {
+    keyId: "key-e",
+    fingerId: "left-middle",
+    color: "purple",
+  },
+  r: {
+    keyId: "key-r",
+    fingerId: "left-index",
+    color: "yellow",
+  },
+  t: {
+    keyId: "key-t",
+    fingerId: "left-index",
+    color: "yellow",
+  },
+  y: {
+    keyId: "key-y",
+    fingerId: "right-index",
+    color: "orange",
+  },
+  u: {
+    keyId: "key-u",
+    fingerId: "right-index",
+    color: "orange",
+  },
+  i: {
+    keyId: "key-i",
+    fingerId: "right-middle",
+    color: "purple",
+  },
+  o: {
+    keyId: "key-o",
+    fingerId: "right-ring",
+    color: "rgb(30,144,255)",
+  },
+  p: {
+    keyId: "key-p",
+    fingerId: "right-pinky",
+    color: "green",
+  },
+  "[": {
+    keyId: "key-l-brack",
+    fingerId: "right-pinky",
+    color: "green",
+  },
+  "]": {
+    keyId: "key-r-brack",
+    fingerId: "right-pinky",
+    color: "green",
+  },
+
+  // Third row of keys on the keyboard
+  a: {
+    keyId: "key-a",
+    fingerId: "left-pinky",
+    color: "green",
+  },
+  s: {
+    keyId: "key-s",
+    fingerId: "left-ring",
+    color: "rgb(30,144,255)",
+  },
+  d: {
+    keyId: "key-d",
+    fingerId: "left-middle",
+    color: "purple",
+  },
+  f: {
+    keyId: "key-f",
+    fingerId: "left-index",
+    color: "yellow",
+  },
+  g: {
+    keyId: "key-g",
+    fingerId: "left-index",
+    color: "yellow",
+  },
+  h: {
+    keyId: "key-h",
+    fingerId: "right-index",
+    color: "orange",
+  },
+  j: {
+    keyId: "key-j",
+    fingerId: "right-index",
+    color: "orange",
+  },
+  k: {
+    keyId: "key-k",
+    fingerId: "right-middle",
+    color: "purple",
+  },
+  l: {
+    keyId: "key-l",
+    fingerId: "right-ring",
+    color: "rgb(30,144,255)",
+  },
+  ":": {
+    keyId: "key-semi",
+    fingerId: "right-pinky",
+    color: "green",
+  },
+  "'": {
+    keyId: "key-s-quote",
+    fingerId: "right-pinky",
+    color: "green",
+  },
+
+  // Fourth row of keys on the keyboard
+  z: {
+    keyId: "key-z",
+    fingerId: "left-pinky",
+    color: "green",
+  },
+  x: {
+    keyId: "key-x",
+    fingerId: "left-ring",
+    color: "rgb(30,144,255)",
+  },
+  c: {
+    keyId: "key-c",
+    fingerId: "left-middle",
+    color: "purple",
+  },
+  v: {
+    keyId: "key-v",
+    fingerId: "left-index",
+    color: "yellow",
+  },
+  b: {
+    keyId: "key-b",
+    fingerId: "left-index",
+    color: "yellow",
+  },
+  n: {
+    keyId: "key-n",
+    fingerId: "right-index",
+    color: "orange",
+  },
+  m: {
+    keyId: "key-m",
+    fingerId: "right-index",
+    color: "orange",
+  },
+  ",": {
+    keyId: "key-comma",
+    fingerId: "right-middle",
+    color: "purple",
+  },
+  ".": {
+    keyId: "key-period",
+    fingerId: "right-ring",
+    color: "rgb(30,144,255)",
+  },
+  "/": {
+    keyId: "key-f-slash",
+    fingerId: "right-pinky",
+    color: "green",
+  },
+
+  // Fifth row of keys on the keyboard
+  " ": {
+    keyId: "key-space",
+    fingerId: "right-thumb",
+    color: "white",
+  },
+};
+
 // Function to highlight a letter
 const highlightLetter = (index) => {
   if (index >= textToType.length) return;
@@ -52,249 +295,6 @@ const removeHighlight = (index) => {
 
 // Function to map characters to keys and fingers
 const getKeyAndFingerByChar = (char) => {
-  // Define a mapping of characters to their corresponding key IDs and finger IDs
-  const charMap = {
-    // First row of keys on the keyboard
-    1: {
-      keyId: "key-1",
-      fingerId: "left-pinky",
-      color: "green",
-    },
-    2: {
-      keyId: "key-2",
-      fingerId: "left-ring",
-      color: "rgb(30,144,255)",
-    },
-    3: {
-      keyId: "key-3",
-      fingerId: "left-middle",
-      color: "purple",
-    },
-    4: {
-      keyId: "key-4",
-      fingerId: "left-index",
-      color: "yellow",
-    },
-    5: {
-      keyId: "key-5",
-      fingerId: "left-index",
-      color: "yellow",
-    },
-    6: {
-      keyId: "key-6",
-      fingerId: "right-index",
-      color: "orange",
-    },
-    7: {
-      keyId: "key-7",
-      fingerId: "right-index",
-      color: "orange",
-    },
-    8: {
-      keyId: "key-8",
-      fingerId: "right-middle",
-      color: "purple",
-    },
-    9: {
-      keyId: "key-9",
-      fingerId: "right-ring",
-      color: "rgb(30,144,255)",
-    },
-    0: {
-      keyId: "key-0",
-      fingerId: "right-pinky",
-      color: "green",
-    },
-    "-": {
-      keyId: "key-minus",
-      fingerId: "right-pinky",
-      color: "green",
-    },
-    "=": {
-      keyId: "key-equal",
-      fingerId: "right-pinky",
-      color: "green",
-    },
-
-    // Second row of keys on the keyboard
-    q: {
-      keyId: "key-q",
-      fingerId: "left-pinky",
-      color: "green",
-    },
-    w: {
-      keyId: "key-w",
-      fingerId: "left-ring",
-      color: "rgb(30,144,255)",
-    },
-    e: {
-      keyId: "key-e",
-      fingerId: "left-middle",
-      color: "purple",
-    },
-    r: {
-      keyId: "key-r",
-      fingerId: "left-index",
-      color: "yellow",
-    },
-    t: {
-      keyId: "key-t",
-      fingerId: "left-index",
-      color: "yellow",
-    },
-    y: {
-      keyId: "key-y",
-      fingerId: "right-index",
-      color: "orange",
-    },
-    u: {
-      keyId: "key-u",
-      fingerId: "right-index",
-      color: "orange",
-    },
-    i: {
-      keyId: "key-i",
-      fingerId: "right-middle",
-      color: "purple",
-    },
-    o: {
-      keyId: "key-o",
-      fingerId: "right-ring",
-      color: "rgb(30,144,255)",
-    },
-    p: {
-      keyId: "key-p",
-      fingerId: "right-pinky",
-      color: "green",
-    },
-    "[": {
-      keyId: "key-l-brack",
-      fingerId: "right-pinky",
-      color: "green",
-    },
-    "]": {
-      keyId: "key-r-brack",
-      fingerId: "right-pinky",
-      color: "green",
-    },
-
-    // Third row of keys on the keyboard
-    a: {
-      keyId: "key-a",
-      fingerId: "left-pinky",
-      color: "green",
-    },
-    s: {
-      keyId: "key-s",
-      fingerId: "left-ring",
-      color: "rgb(30,144,255)",
-    },
-    d: {
-      keyId: "key-d",
-      fingerId: "left-middle",
-      color: "purple",
-    },
-    f: {
-      keyId: "key-f",
-      fingerId: "left-index",
-      color: "yellow",
-    },
-    g: {
-      keyId: "key-g",
-      fingerId: "left-index",
-      color: "yellow",
-    },
-    h: {
-      keyId: "key-h",
-      fingerId: "right-index",
-      color: "orange",
-    },
-    j: {
-      keyId: "key-j",
-      fingerId: "right-index",
-      color: "orange",
-    },
-    k: {
-      keyId: "key-k",
-      fingerId: "right-middle",
-      color: "purple",
-    },
-    l: {
-      keyId: "key-l",
-      fingerId: "right-ring",
-      color: "rgb(30,144,255)",
-    },
-    ":": {
-      keyId: "key-semi",
-      fingerId: "right-pinky",
-      color: "green",
-    },
-    "'": {
-      keyId: "key-s-quote",
-      fingerId: "right-pinky",
-      color: "green",
-    },
-
-    // Fourth row of keys on the keyboard
-    z: {
-      keyId: "key-z",
-      fingerId: "left-pinky",
-      color: "green",
-    },
-    x: {
-      keyId: "key-x",
-      fingerId: "left-ring",
-      color: "rgb(30,144,255)",
-    },
-    c: {
-      keyId: "key-c",
-      fingerId: "left-middle",
-      color: "purple",
-    },
-    v: {
-      keyId: "key-v",
-      fingerId: "left-index",
-      color: "yellow",
-    },
-    b: {
-      keyId: "key-b",
-      fingerId: "left-index",
-      color: "yellow",
-    },
-    n: {
-      keyId: "key-n",
-      fingerId: "right-index",
-      color: "orange",
-    },
-    m: {
-      keyId: "key-m",
-      fingerId: "right-index",
-      color: "orange",
-    },
-    ",": {
-      keyId: "key-comma",
-      fingerId: "right-middle",
-      color: "purple",
-    },
-    ".": {
-      keyId: "key-period",
-      fingerId: "right-ring",
-      color: "rgb(30,144,255)",
-    },
-    "/": {
-      keyId: "key-f-slash",
-      fingerId: "right-pinky",
-      color: "green",
-    },
-
-    // Fifth row of keys on the keyboard
-    " ": {
-      keyId: "key-space",
-      fingerId: "right-thumb",
-      color: "white",
-    },
-  };
-
   // Return the mapping for the given character, or defualt if the character is not in the map
   return (
     charMap[char.toLowerCase()] || {
@@ -405,13 +405,15 @@ document.addEventListener("keydown", (event) => {
     // Remove highlight from the current letter, key, and finger
     removeHighlight(currentIndex);
     removehighlightKeyAndFinger();
+    correctCount--;
 
     // Check if the current letter has a red background (indicating a typo)
     const currentLetterElement = document.getElementById(
       `letter-${currentIndex - 1}`
     );
     if (currentLetterElement.style.backgroundColor === "red") {
-      incorrectCount--; // Decrement the incorrectCount
+      incorrectCount--;
+      correctCount++; // Decrement the incorrectCount
       currentLetterElement.style.backgroundColor = ""; // Reset the background color
     }
 
@@ -462,19 +464,6 @@ document.addEventListener("keydown", (event) => {
     highlightKeyAndFinger(textToType[currentIndex]);
   }
 
-  // cLE is currentLetterElement
-  const cLE = document.getElementById(`letter-${currentIndex}`);
-  if (cLE) {
-    const container = document.getElementById("screen"); // Targeting the #screen element
-    const containerBottom = container.clientHeight + container.scrollTop;
-    const letterBottom = cLE.offsetTop + cLE.clientHeight;
-
-    // Check if the bottom of the letter is near or past the bottom of the visible container
-    if (letterBottom > containerBottom) {
-      container.scrollTop = 1.5 * letterBottom - container.clientHeight;
-    }
-  }
-
   if (!isTimerRunning) {
     startTimer();
   }
@@ -488,7 +477,7 @@ document.addEventListener("keydown", (event) => {
     const endTime = new Date();
     const timeDiff = (endTime - startTime) / 1000; // Convert to seconds
     const minutes = timeDiff / 60; // Convert to mintutes
-    const totalWords = textToType.length / 5; // Average English word lenght.
+    const totalWords = textToType.length / 5; // Average English word length.
     const wpm = totalWords / minutes; // Calculate words per minute
     const accuracy = calculateAccuracy(correctCount);
 
