@@ -17,19 +17,58 @@
       <div id="keyboard">
         <!-- First row of keys on the keyboard -->
         <div class="row">
-          <div class="key col-pinky" id="key-esc">ESC</div>
-          <div class="key col-pinky" id="key-1">1</div>
-          <div class="key col-ring" id="key-2">2</div>
-          <div class="key col-middle" id="key-3">3</div>
-          <div class="key col-l-index" id="key-4">4</div>
-          <div class="key col-l-index" id="key-5">5</div>
-          <div class="key col-r-index" id="key-6">6</div>
-          <div class="key col-r-index" id="key-7">7</div>
-          <div class="key col-middle" id="key-8">8</div>
-          <div class="key col-ring" id="key-9">9</div>
-          <div class="key col-pinky" id="key-0">0</div>
-          <div class="key col-pinky" id="key-minus">-</div>
-          <div class="key col-pinky" id="key-equal">=</div>
+          <div class="key col-pinky">
+            <div class="multi-key">~</div>
+            <div class="multi-key" id="key-bcktck">`</div>
+          </div>
+          <div class="key col-pinky" id="key-1">
+            <div class="multi-key">!</div>
+            <div class="multi-key">1</div>
+          </div>
+          <div class="key col-ring" id="key-2">
+            <div class="multi-key">@</div>
+            <div class="multi-key">2</div>
+          </div>
+          <div class="key col-middle" id="key-3">
+            <div class="multi-key">#</div>
+            <div class="multi-key">3</div>
+          </div>
+          <div class="key col-l-index" id="key-4">
+            <div class="multi-key">$</div>
+            <div class="multi-key">4</div>
+          </div>
+          <div class="key col-l-index" id="key-5">
+            <div class="multi-key">%</div>
+            <div class="multi-key">5</div>
+          </div>
+          <div class="key col-r-index" id="key-6">
+            <div class="multi-key">^</div>
+            <div class="multi-key">6</div>
+          </div>
+          <div class="key col-r-index" id="key-7">
+            <div class="multi-key">&</div>
+            <div class="multi-key">7</div>
+          </div>
+          <div class="key col-middle" id="key-8">
+            <div class="multi-key">*</div>
+            <div class="multi-key">8</div>
+          </div>
+          <div class="key col-ring" id="key-9">
+            <div class="multi-key">(</div>
+            <div class="multi-key">9</div>
+          </div>
+          <div class="key col-pinky" id="key-0">
+            <div class="multi-key">)</div>
+            <div class="multi-key">0</div>
+          </div>
+          <div class="key col-pinky" id="key-minus">
+            <div class="multi-key">_</div>
+            <div class="multi-key">-</div>
+          </div>
+          <div class="key col-pinky" id="key-equal">
+            <div class="multi-key">+</div>
+            <div class="multi-key">=</div>
+          </div>
           <div class="key col-pinky" id="key-bckspc">⌫</div>
         </div>
 
@@ -46,14 +85,23 @@
           <div class="key col-middle" id="key-i">I</div>
           <div class="key col-ring" id="key-o">O</div>
           <div class="key col-pinky" id="key-p">P</div>
-          <div class="key col-pinky" id="key-l-brack">[</div>
-          <div class="key col-pinky" id="key-r-brack">]</div>
-          <div class="key col-pinky" id="key-b-slash">\</div>
+          <div class="key col-pinky" id="key-l-brack">
+            <div class="multi-key">{</div>
+            <div class="multi-key">[</div>
+          </div>
+          <div class="key col-pinky" id="key-r-brack">
+            <div class="multi-key">}</div>
+            <div class="multi-key">]</div>
+          </div>
+          <div class="key col-pinky" id="key-b-slash">
+            <div class="multi-key">|</div>
+            <div class="multi-key">\</div>
+          </div>
         </div>
 
         <!-- Third row of keys on the keyboard -->
         <div class="row">
-          <div class="key col-pinky" id="key-CAPS">CAPS</div>
+          <div class="key col-pinky" id="key-caps">CAPS</div>
           <div class="key col-pinky" id="key-a">A</div>
           <div class="key col-ring" id="key-s">S</div>
           <div class="key col-middle" id="key-d">D</div>
@@ -63,14 +111,20 @@
           <div class="key col-r-index" id="key-j">J</div>
           <div class="key col-middle" id="key-k">K</div>
           <div class="key col-ring" id="key-l">L</div>
-          <div class="key col-pinky" id="key-semi">;</div>
-          <div class="key col-pinky" id="key-s-quote">'</div>
+          <div class="key col-pinky" id="key-semi">
+            <div class="multi-key">:</div>
+            <div class="multi-key">;</div>
+          </div>
+          <div class="key col-pinky" id="key-s-quote">
+            <div class="multi-key">"</div>
+            <div class="multi-key">'</div>
+          </div>
           <div class="key col-pinky" id="key-enter">↵</div>
         </div>
 
         <!-- Fourth row of keys on the keyboard -->
         <div class="row">
-          <div class="key col-pinky" id="key-shift">SHIFT</div>
+          <div class="key col-pinky" id="key-l-shift">SHIFT</div>
           <div class="key col-pinky" id="key-z">Z</div>
           <div class="key col-ring" id="key-x">X</div>
           <div class="key col-middle" id="key-c">C</div>
@@ -78,19 +132,31 @@
           <div class="key col-l-index" id="key-b">B</div>
           <div class="key col-r-index" id="key-n">N</div>
           <div class="key col-r-index" id="key-m">M</div>
-          <div class="key col-middle" id="key-comma">,</div>
-          <div class="key col-ring" id="key-period">.</div>
-          <div class="key col-pinky" id="key-f-slash">/</div>
+          <div class="key col-middle" id="key-comma">
+            <div class="multi-key"><</div>
+            <div class="multi-key">,</div>
+          </div>
+          <div class="key col-ring" id="key-period">
+            <div class="multi-key">></div>
+            <div class="multi-key">.</div>
+          </div>
+          <div class="key col-pinky" id="key-f-slash">
+            <div class="multi-key">?</div>
+            <div class="multi-key">/</div>
+          </div>
           <div class="key col-pinky" id="key-r-shift">SHIFT</div>
         </div>
 
         <!-- Fifth row of keys on the keyboard -->
         <div class="row">
-          <div class="key col-pinky" id="key-ctrl">CTRL</div>
-          <div class="key col-pinky" id="key-win">WIN</div>
-          <div class="key col-pinky" id="key-alt">ALT</div>
+          <div class="key col-pinky" id="key-l-ctrl">Ctrl</div>
+          <div class="key col-pinky" id="key-l-win"></div>
+          <div class="key empty" id="key-l-alt">Alt</div>
           <div class="key col-thumb" id="key-space">SPACE</div>
-          <div class="key col-pinky" id="key-fn">FN</div>
+          <div class="key empty" id="key-r-alt">Alt</div>
+          <div class="key empty" id="key-r-win"></div>
+          <div class="key col-pinky" id="key-menu"></div>
+          <div class="key col-pinky" id="key-r-ctrl">Ctrl</div>
         </div>
       </div>
     </div>
